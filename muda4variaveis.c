@@ -13,8 +13,8 @@ Imprimir a quantidade de IFs utilizados na ordenação das 4 variáveis
 
 #include <stdio.h>
 int main(){
-    int a, b, c, d, aux;
-    int count = 0;
+    int a, b, c, d, variavelAuxiliar;
+    int contadora = 0;
     printf("Organizador de números inteiros:\n");
     printf("Digite 4 números inteiros:\n");
     printf("Digite o valor de a: ");
@@ -27,31 +27,46 @@ int main(){
     scanf("%d", &d);
 
     if(a > b){
-        aux = a;
+        variavelAuxiliar = a;
         a = b;
-        b = aux;
-        count++;
+        b = variavelAuxiliar;
+        contadora++;
     }
     if(b > c){
-        aux = b;
+        variavelAuxiliar = b;
         b = c;
-        c = aux;
-        count++;
+        c = variavelAuxiliar;
+        contadora++;
     }
     if(c > d){
-        aux = c;
+        variavelAuxiliar = c;
         c = d;
-        d = aux;
-        count++;
+        d = variavelAuxiliar;
+        contadora++;
     }
     if(a > b){
-        aux = a;
+        variavelAuxiliar = a;
         a = b;
-        b = aux;
-        count++;
+        b = variavelAuxiliar;
+        contadora++;
     }
+     if(b > c){
+        variavelAuxiliar = b;
+        b = c;
+        c = variavelAuxiliar;
+        contadora++;
+    }
+     if(c > d){
+        variavelAuxiliar = c;
+        c = d;
+        d = variavelAuxiliar;
+        contadora++;
+    }
+    
+
+
     printf("Valores em ordem crescente:\n");
     printf("a = %d\nb =  %d\nc =  %d\nd =  %d\n", a,b,c,d);
-    printf("Foram executados: %d ifs\n", count);
+    printf("Foram executados: %d ifs\n", contadora);
 
     return 0; }
