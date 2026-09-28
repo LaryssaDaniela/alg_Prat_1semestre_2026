@@ -1,0 +1,12 @@
+/*Usando a estrutura ternária
+Solicitar a entrada de um número inteiro
+Verificar se o número é PAR ou IMPAR*/
+
+#include <stdio.h>
+int main(){
+int num;
+printf("Digite um número: ");
+scanf("%d", &num);
+(num % 2 == 0) ? printf("Par\n") : printf("Impar\n");
+return 0;
+}
